@@ -21,8 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
+      - name: Run unit tests
         run: npm run test -- --coverage
+
   style:
     name: Style
     runs-on: ubuntu-latest
@@ -39,8 +40,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Style
+      - name: Check formatting
         run: npm run format:check
 
-      - name: Lint
+      - name: Check linting
         run: npm run lint -- --max-warnings=0
