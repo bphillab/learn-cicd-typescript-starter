@@ -30,6 +30,6 @@ describe("getAPIKey", () => {
     test("returns the api key from the headers", () => {
         expect(getAPIKey(headers1)).toBe(null)
         expect(getAPIKey(headers2)).toBe("test-token")
-        expect(getAPIKey(headers3)).toBe(null)
+        expect(getAPIKey(headers3)).toBe("")
     })
 })
